@@ -7,7 +7,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("/test").then( // fetch API
+    fetch("/dummy").then( // fetch API endpoint
       res => res.json()
     ).then(
       data => {
@@ -22,11 +22,11 @@ function App() {
     // use state variable to render data onto frontend
     <div>
     
-      {(typeof data.members == 'undefined') ? (
+      {(typeof data.dummy == 'undefined') ? (
         <p>Loading...</p>
       ) : (
-        data.members.map((member, i) => (
-          <p key = {i} > {member}</p>
+        data.dummy.map((dummy, i) => (
+          <p key = {i} > {dummy}</p>
         
         
         ))
