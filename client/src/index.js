@@ -1,8 +1,24 @@
+/*
+Author: David Luby
+Date created: 2-10-2023
+
+This script serves a frontend for a contract evaluation web application
+facilitated by a Flask API
+*/
+
+
+// Module imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Children imports
+import 'bootstrap/dist/css/bootstrap.css';
+import "./index.css";
+import App from './App';
+
+
+// Index render
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

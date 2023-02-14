@@ -32,7 +32,7 @@ def create_URL(full_name):
 
     flag = False
     count = 0
-    while flag == False:
+    while count < 1:#flag == False:
         count += 1
         number = str(count)
         url = ('https://www.basketball-reference.com/players/' + first_of_last
@@ -48,8 +48,8 @@ def create_URL(full_name):
 
         if first == page_first.lower():
             flag = True
-    print(first, page_first.lower(), count)
-    out = [first, page_first.lower(), count]
+    print(first, page_first.lower())
+    out = [first, page_first.lower()]
     return out
 
 
@@ -57,7 +57,7 @@ def create_URL(full_name):
 
 
 def main():
-    out = create_URL('mArcUs SMaRt')
+    out = create_URL('marcus smart')
     return out
 
 

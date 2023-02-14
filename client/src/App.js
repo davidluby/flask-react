@@ -1,41 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import './App.css'
+import Nav from "./nav/Nav"
+import Search from "./search/Search"
+import Card from "./card/Card"
+import Example from "./example/Example"
 
-function App() {
 
-
-  const [data, setData] = useState([{}]) // create state variable
-
-
-  useEffect(() => {
-    fetch("/dummy").then( // fetch API endpoint
-      res => res.json()
-    ).then(
-      data => {
-        setData(data) // set state variable to backend response
-        console.log(data)
-      }
-    )
-  }, [])
-
+function Evaluator() {
+  
   return (
-
-    // use state variable to render data onto frontend
-    <div>
-    
-      {(typeof data.dummy == 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        data.dummy.map((dummy, i) => (
-          <p key = {i} > {dummy}</p>
-        
-        
-        ))
-      )}
-    
-    
-    
+    <div class="border border-success border-3 d-flex flex-column">
+      <Nav />
+      <div>
+      <Search />
+      <Card />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default Evaluator
