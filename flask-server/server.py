@@ -16,7 +16,7 @@ import requests
 
 
 # Script imports
-import player_stats
+import player_data
 
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ app = Flask(__name__)
 def showStats():
     data = request.get_json()
     print("Out:", data)
-    stats = player_stats.main(data)
+    stats = player_data.main(data)
     
     return {"stats": stats}
 

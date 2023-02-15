@@ -2,22 +2,20 @@
 Author: David Luby
 Date created: 2-10-2023
 
-This script serves a frontend for a contract evaluation web application
-facilitated by a Flask API
+This script serves the frontend for a React application that lets users make
+decks of NBA trading cards
 */
 
-import './App.css'
 import Nav from "./nav/Nav"
-import Search2 from "./search2/Search2"
-
+import Search from "./search/Search"
 
 function Evaluator() {
   
   return (
-    <div className="border border-success border-3 d-flex flex-column">
+    <div className="border border-success border-3">
       <Nav />
       <div>
-      <Search2 />
+      <Search />
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import React from 'react'
+import css from "./Nav.module.css"
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light fixed-top border border-3 border-primary bar pad-strip">
+    <nav className={`${"navbar navbar-expand-sm navbar-dark fixed-top"} ${css.bar} ${css.padstrip}`}>
 
             <div className="container-fluid">
             
@@ -14,83 +15,27 @@ function Nav() {
                     <span className="navbar-toggler-icon"> </span>
                 </button>
                 
-                <a className = "navbar-brand logo nav-link active" href="/"></a>
+                <a className = {`${"navbar-brand nav-link active"} ${css.logo}`} href="/"></a>
                 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     
                     <ul className="navbar-nav me-auto mb-lg-0">
 
                         <li className="nav-item">
-                            <a className="nav-link active nav-but" aria-current="page" href="/resume.html">
-                                Resume
+                            <a className={`${"nav-link active"} ${css.navbut}`} aria-current="page" href="/resume.html">
+                                Page
                             </a>
                         </li>
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link active nav-but nav-bar" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Software
+                        <li className="nav-item">
+                            <a className={`${"nav-link active"} ${css.navbut}`} aria-current="page" href="/resume.html">
+                                Page
                             </a>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <a className="dropdown-item" href="/big.html">
-                                        Big-O Notation
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="/fifo.html">
-                                        First In, First Out
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="/fft.html">
-                                        Fast Fourier Transform
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
-
-                        <li className="nav-item dropdown">
-                            <a className="nav-link active nav-but" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Firmware
+                        <li className="nav-item">
+                            <a className={`${"nav-link active"} ${css.navbut}`} aria-current="page" href="/resume.html">
+                                Page
                             </a>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <a className="dropdown-item" href="/micro.html">
-                                        Microcontroller Basics
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="/timer.html">
-                                        Timer Function
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li className="nav-item dropdown">
-                            <a className="nav-link active nav-but" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Mechanical
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <a className="dropdown-item" href="/controls.html">
-                                        Control Systems
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="/fourier.html">
-                                        Fourier Transform
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="/fea.html">
-                                        Finite Element Analysis
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>

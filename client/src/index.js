@@ -14,7 +14,6 @@ import reportWebVitals from './reportWebVitals';
 
 // Children imports
 import 'bootstrap/dist/css/bootstrap.css';
-import "./index.css";
 import App from './App';
 
 

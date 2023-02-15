@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import Card from "../card/Card"
-
 import style from "./Search.module.css"
 
 function Search() {
@@ -12,7 +10,7 @@ function Search() {
 
 
   const getData = (event) => {
-    if (event.key === "Enter") {
+    if (event.key == "Enter") {
       fetch(apiKey, {
         method: "POST",
         headers: {
@@ -42,8 +40,19 @@ function Search() {
       </input>
 
 
-      <div className="border border-3 border-primary">
-        <Card data={playerData.stats}/>
+      <div className="mt-4 d-flex align-items-center border border-3 border-primary">
+        {(typeof playerData.stats == 'undefined') ? (
+          <div>
+            <p className="m-0">
+              Welcome to your deck! Enter your favorite player's name above to
+              get your first card.
+            </p>
+          </div>
+        ) : (
+          playerData.stats.map((stats, i) => (
+            <p className="m-0 border border-1 p-2" key={i}> {stats}</p>
+          ))
+        )}
       </div>
     </div>
     
