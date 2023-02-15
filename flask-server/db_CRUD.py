@@ -34,7 +34,7 @@ def read(conn):
     out = []
     for row in cursor:
         out.append(str(row))
-        #print(f'row = {row}')
+        print(f'row = {row}')
     return(out)
 
 
